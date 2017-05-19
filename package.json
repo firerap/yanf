@@ -11,19 +11,6 @@
   "keywords": [],
   "author": "Ivan Drondov",
   "license": "MIT",
-  "devDependencies": {
-    "@types/chai": "3.5.2",
-    "@types/express": "4.0.35",
-    "@types/mocha": "2.2.41",
-    "@types/node": "7.0.14",
-    "@types/reflect-metadata": "0.0.5",
-    "chai": "3.5.0",
-    "mocha": "3.3.0",
-    "nodemon": "1.11.0",
-    "ts-node": "3.0.2",
-    "typescript": "2.3.2",
-    "typings": "2.1.1"
-  },
   "dependencies": {
     "body-parser": "1.17.1",
     "cookie-parser": "1.4.3",
@@ -31,7 +18,18 @@
     "glob": "7.1.1",
     "lodash": "4.17.4",
     "nconf": "0.8.4",
-    "reflect-metadata": "0.1.10",
-    "winston": "2.3.1"
+    "winston": "2.3.1",
+    "ts-node": "3.0.2",
+    "typescript": "2.3.2",
+    "@types/node": "7.0.14",
+    "@types/express": "4.0.35",
+    "typings": "2.1.1"
+  },
+  "devDependencies": {
+    "@types/chai": "3.5.2",
+    "@types/mocha": "2.2.41",
+    "chai": "3.5.0",
+    "mocha": "3.3.0",
+    "nodemon": "1.11.0"
   }
 }
