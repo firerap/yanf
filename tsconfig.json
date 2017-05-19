@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+     "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ],
     /* Basic Options */                       
     "target": "es2016",                          /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', or 'ESNEXT'. */
     "module": "commonjs",                     /* Specify module code generation: 'commonjs', 'amd', 'system', 'umd' or 'es2015'. */
