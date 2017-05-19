@@ -51,6 +51,11 @@ export default class Server {
             dir: configDir,
         });
 
+        const mainContainer = new DI.Container();
+        mainContainer.set('config', this._config);
+        mainContainer.set('logger', this._logger);
+        this.addContainer('main', mainContainer);
+
         if (options.autoload) this.autoload();
     }
 
@@ -104,6 +109,7 @@ export default class Server {
         this.load({
             name: 'routes',
             pattern: path.join(this.dir, './resources/**/*.route.{js,ts}'),
+            inject: ['main'],
             // inject: ['dao'],
         });
         this.initServer();
