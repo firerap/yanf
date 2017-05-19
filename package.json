@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha -r ts-node/register './src/**/*.spec.ts'",
     "build": "tsc",
-    "watch": "nodemon"
+    "watch": "nodemon",
+    "postinstall": "npm install && npm run build"
   },
   "keywords": [],
   "author": "Ivan Drondov",
