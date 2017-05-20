@@ -2,7 +2,7 @@
   "name": "yanf",
   "version": "0.0.1",
   "description": "",
-  "main": "out/index.js",
+  "main": "out/src/index.js",
   "scripts": {
     "test": "mocha -r ts-node/register './src/**/*.spec.ts'",
     "test:integration": "mocha -r ts-node/register './test/**/*.test.ts'",
