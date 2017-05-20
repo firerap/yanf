@@ -86,7 +86,7 @@ export default class Server {
         break;
       }
       default: {
-        handler = this._getLoadHandlerByName(name);
+        handler = this._getLoadHandlerByName(options.name);
       }
     }
 
