@@ -7,7 +7,6 @@ import { IConfig } from './IConfig';
 const DEFAULT_ENV = 'local';
 
 export default class Config implements IConfig {
-
 	get(): any {}
 	set(): void {}
 

@@ -4,14 +4,14 @@ import * as winston from 'winston';
 // import { MongoDB as WinstonMongoDB } from 'winston-mongodb';
 
 export default class Logger implements ILogger {
-  info() {}
-  verbose() {}
-  debug() {}
-  warn() {}
-  error() {}
+	info() {}
+	verbose() {}
+	debug() {}
+	warn() {}
+	error() {}
 
 	constructor(options: { level?: string, console?: boolean } = {}) {
-    const winstonLogger = new winston.Logger({
+		const winstonLogger = new winston.Logger({
 			level: options.level || 'verbose',
 		});
 
