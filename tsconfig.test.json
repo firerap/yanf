@@ -1,9 +1,4 @@
 {
-  "exclude": [
-      "node_modules",
-      "**/*.spec.ts",
-      "out"
-  ],
   "compilerOptions": {
     /* Basic Options */
     "target": "es2016",                          /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', or 'ESNEXT'. */
