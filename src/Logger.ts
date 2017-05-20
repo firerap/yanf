@@ -11,12 +11,12 @@ export default class Logger implements ILogger {
   error() {}
 
 	constructor(options: { level?: string, console?: boolean } = {}) {
-    const winsonLogger = new winston.Logger({
+    const winstonLogger = new winston.Logger({
 			level: options.level || 'verbose',
 		});
 
 		if (options.console) {
-			winsonLogger.add(winston.transports.Console, {
+			winstonLogger.add(winston.transports.Console, {
 				colorize: true,
 				prettyPrint: true,
 			});
@@ -27,7 +27,7 @@ export default class Logger implements ILogger {
 		// }
 
 		['verbose', 'debug', 'info', 'warn', 'error'].forEach(item => {
-			this[item] = winsonLogger[item].bind(winsonLogger);
+			this[item] = winstonLogger[item].bind(winstonLogger);
 		});
 
 		// if (options.http) {
