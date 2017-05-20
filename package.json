@@ -15,6 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "@types/mongoose": "4.7.13",
+    "mockgoose": "7.3.1",
     "body-parser": "1.17.1",
     "cookie-parser": "1.4.3",
     "express": "4.15.2",
