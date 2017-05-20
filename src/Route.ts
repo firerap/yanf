@@ -41,7 +41,7 @@ export default class Route {
     if (!Array.isArray(_middleware)) {
       _middleware = [_middleware];
     }
-    if (!_middleware.every(m => _.isFunction)) {
+    if (!_middleware.every(_.isFunction)) {
       throw new Error('Some middleware is not a function');
     }
 
