@@ -4,20 +4,19 @@ import * as winston from 'winston';
 // import { MongoDB as WinstonMongoDB } from 'winston-mongodb';
 
 export default class Logger implements ILogger {
-    info() {}
-    verbose() {}
-    debug() {}
-    warn() {}
-    error() {}
+	info() {}
+	verbose() {}
+	debug() {}
+	warn() {}
+	error() {}
 
 	constructor(options: { level?: string, console?: boolean } = {}) {
-
-		const winsonLogger = new winston.Logger({
+		const winstonLogger = new winston.Logger({
 			level: options.level || 'verbose',
 		});
 
 		if (options.console) {
-			winsonLogger.add(winston.transports.Console, {
+			winstonLogger.add(winston.transports.Console, {
 				colorize: true,
 				prettyPrint: true,
 			});
@@ -27,14 +26,8 @@ export default class Logger implements ILogger {
 		// 	winsonLogger.add(winston.transports.MongoDB, options.mongodb);
 		// }
 
-		[
-			'verbose',
-			'debug',
-			'info',
-			'warn',
-			'error',
-		].forEach(item => {
-			this[item] = winsonLogger[item].bind(winsonLogger);
+		['verbose', 'debug', 'info', 'warn', 'error'].forEach(item => {
+			this[item] = winstonLogger[item].bind(winstonLogger);
 		});
 
 		// if (options.http) {

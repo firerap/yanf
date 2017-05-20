@@ -7,23 +7,22 @@ import { IConfig } from './IConfig';
 const DEFAULT_ENV = 'local';
 
 export default class Config implements IConfig {
-
 	get(): any {}
 	set(): void {}
 
-    private loadFile(path_) {
-        try {
+	private loadFile(path_) {
+		try {
 			const data = JSON.parse(readFileSync(path_).toString());
 			return data;
 		} catch (err) {
 			return {};
 		}
-    }
+	}
 
 	constructor(options: { env?: string, dir?: string }) {
-        if (!options.env) options.env = DEFAULT_ENV;
-        if (!options.dir) throw new Error('Property `dir` is required.');
-        const defaultConfig = this.loadFile(path.join(options.dir, 'config.json'));
+		if (!options.env) options.env = DEFAULT_ENV;
+		if (!options.dir) throw new Error('Property `dir` is required.');
+		const defaultConfig = this.loadFile(path.join(options.dir, 'config.json'));
 
 		const env = options.env.toLowerCase();
 
