@@ -5,6 +5,7 @@
   "main": "out/index.js",
   "scripts": {
     "test": "mocha -r ts-node/register './src/**/*.spec.ts'",
+    "test:integration": "mocha -r ts-node/register './test/**/*.test.ts'",
     "build": "tsc",
     "watch": "nodemon",
     "postinstall": "npm run build"
@@ -13,11 +14,14 @@
   "author": "Ivan Drondov",
   "license": "MIT",
   "dependencies": {
+    "@types/mongoose": "4.7.13",
+    "mockgoose": "7.3.1",
     "body-parser": "1.17.1",
     "cookie-parser": "1.4.3",
     "express": "4.15.2",
     "glob": "7.1.1",
     "lodash": "4.17.4",
+    "mongoose": "4.10.0",
     "nconf": "0.8.4",
     "winston": "2.3.1",
     "ts-node": "3.0.2",
