@@ -3,7 +3,8 @@
       "node_modules",
       "**/*.spec.ts",
       "out",
-      "test"
+      "test",
+      "examples"
   ],
   "compilerOptions": {
     /* Basic Options */
