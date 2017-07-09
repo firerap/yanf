@@ -1,4 +1,4 @@
-### YANF - simple webserver framework.
+### YANF - simple webserver framework
 
 ##### Class *Server*
 
